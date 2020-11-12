@@ -69,5 +69,11 @@ namespace Budget
         {
             timer1.Start();
         }
+
+        private void btIncome_Click(object sender, EventArgs e)
+        {
+            FormIncome formincome = new FormIncome();
+            formincome.Show();
+        }
     }
 }

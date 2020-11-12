@@ -183,6 +183,7 @@
             this.btIncome.TabIndex = 0;
             this.btIncome.Text = "Внести доходы";
             this.btIncome.UseVisualStyleBackColor = true;
+            this.btIncome.Click += new System.EventHandler(this.btIncome_Click);
             // 
             // btCosts
             // 
