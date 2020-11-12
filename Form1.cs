@@ -44,7 +44,15 @@ namespace Budget
         {
             InitializeComponent();
             dbConnection = new OleDbConnection(connectionString);
-            dbConnection.Open();
+            try
+            {
+                dbConnection.Open();
+                lbConnect.Text = "Соединение с БД установлено";
+            } catch
+            {
+                lbConnect.Text = "Соединение с БД не установлено";
+            }
+            
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
