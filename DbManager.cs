@@ -39,17 +39,17 @@ namespace Budget
             }
         }
         
-        public static OleDbDataReader selectAllfromTable(string table)//Получение поле name из таблицы
+        public static List<String> selectAllfromTable(string table)//Получение поле name из таблицы
         {
             List<String> list = new List<string>();
             string query = $"SELECT * FROM {table}";
             OleDbCommand command = new OleDbCommand(query, dbConnection);
             OleDbDataReader reader = command.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    list.Add((string) reader["name"]);
-            //}
-            return reader;
+            while (reader.Read())
+            {
+                list.Add((string) reader["name"]);
+            }
+            return list;
         }
 
         public static Boolean CheckForMatches(string matches, string table)
