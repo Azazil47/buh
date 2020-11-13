@@ -39,5 +39,17 @@ namespace Budget
             }
         }
         
+        public static List<String> selectCatIncome()
+        {
+            List<String> list = new List<string>();
+            string query = "SELECT * FROM category_incoming";
+            OleDbCommand command = new OleDbCommand(query, dbConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                list.Add((string) reader["name"]);
+            }
+            return list;
+        }
     }
 }
