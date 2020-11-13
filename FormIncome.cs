@@ -26,8 +26,17 @@ namespace Budget
         {
             lbName.Visible = true;
             tbName.Visible = true;
+            lbSum.Visible = true;
+            tbSum.Visible = true;
             lbDate.Visible = true;
             dtCalendar.Visible = true;
+            btAdd.Visible = true;
+            btCancel.Visible = true;
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

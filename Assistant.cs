@@ -14,6 +14,7 @@ namespace Budget
             {
                 comboBox.Items.Add(item);
             }
+            comboBox.Items.Add("<добавить>");
         }
     }
 }
