@@ -13,51 +13,26 @@ namespace Budget
 {
     public partial class Form1 : Form
     {
-        private string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget.mdb"; //Строка подключения
-        private OleDbConnection dbConnection;
-        private double balance;
-        public double Balance
-        {
-            get
-            {
-                return balance;
-            }
-            set
-            {
-                balance = value;
-            }
-        }
-
-        private double costs;
-        public double Costs
-        {
-            get
-            {
-                return costs;
-            }
-            set
-            {
-                costs = value;
-            }
-        }
+        //private string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=budget.mdb"; //Строка подключения
+        //public OleDbConnection dbConnection;
+        
         public Form1()
         {
             InitializeComponent();
-            dbConnection = new OleDbConnection(connectionString);
-            try
+            if (DbManager.connectDb())
             {
-                dbConnection.Open();
                 lbConnect.Text = "Соединение с БД установлено";
-            } catch
+            } //Соединение с БД и вывод результата в lable
+            else
             {
                 lbConnect.Text = "Соединение с БД не установлено";
-            }
-            
+            }//В случае неудачного соединения
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            dbConnection.Close();
+            DbManager.connectDb();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

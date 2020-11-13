@@ -16,5 +16,10 @@ namespace Budget
         {
             InitializeComponent();
         }
+
+        private void FormIncome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
