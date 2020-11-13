@@ -8,9 +8,9 @@ namespace Budget
 {
     class Assistant
     {
-        public Assistant(System.Windows.Forms.ComboBox comboBox, List<String> list)
+        public Assistant(System.Windows.Forms.ComboBox comboBox, string table)
         {
-            foreach (var item in DbManager.selectCatIncome())
+            foreach (var item in DbManager.selectAllfromTable(table))
             {
                 comboBox.Items.Add(item);
             }

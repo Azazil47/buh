@@ -39,10 +39,10 @@ namespace Budget
             }
         }
         
-        public static List<String> selectCatIncome()//Получение списка категорий
+        public static List<String> selectAllfromTable(string table)//Получение поле name из таблицы
         {
             List<String> list = new List<string>();
-            string query = "SELECT * FROM category_incoming";
+            string query = $"SELECT * FROM {table}";
             OleDbCommand command = new OleDbCommand(query, dbConnection);
             OleDbDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -50,6 +50,25 @@ namespace Budget
                 list.Add((string) reader["name"]);
             }
             return list;
+        }
+
+        public static Boolean CheckForMatches(string matches, string table)
+        {
+            Boolean flag = false;
+            foreach (var item in selectAllfromTable(table))
+            {
+                if (matches == item)
+                {
+                    //string query = $"INSERT INTO {table} VALUES(\"{matches}\")";
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        public static void addIncome(string category, string name, double sum, DateTime date)
+        {
+            
         }
     }
 }

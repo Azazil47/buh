@@ -19,7 +19,7 @@ namespace Budget
 
         private void FormIncome_Load(object sender, EventArgs e)
         {
-            Assistant assistant = new Assistant(comboBox1, DbManager.selectCatIncome());
+            Assistant assistant = new Assistant(comboBox1, "category_incoming");
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -37,6 +37,11 @@ namespace Budget
         private void btCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(DbManager.CheckForMatches(comboBox1.Text, "category_incoming").ToString());
         }
     }
 }

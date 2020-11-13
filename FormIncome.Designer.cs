@@ -211,6 +211,7 @@
             this.btAdd.Text = "Сохранить";
             this.btAdd.UseVisualStyleBackColor = true;
             this.btAdd.Visible = false;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btCancel
             // 
