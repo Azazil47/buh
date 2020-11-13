@@ -21,5 +21,13 @@ namespace Budget
         {
             Assistant assistant = new Assistant(comboBox1, DbManager.selectCatIncome());
         }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            lbName.Visible = true;
+            tbName.Visible = true;
+            lbDate.Visible = true;
+            dtCalendar.Visible = true;
+        }
     }
 }
