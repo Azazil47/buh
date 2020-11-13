@@ -39,7 +39,7 @@ namespace Budget
             }
         }
         
-        public static List<String> selectCatIncome()
+        public static List<String> selectCatIncome()//Получение списка категорий
         {
             List<String> list = new List<string>();
             string query = "SELECT * FROM category_incoming";

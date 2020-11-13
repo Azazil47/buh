@@ -19,10 +19,7 @@ namespace Budget
 
         private void FormIncome_Load(object sender, EventArgs e)
         {
-            foreach (var item in DbManager.selectCatIncome())
-            {
-                comboBox1.Items.Add(item);
-            }
+            Assistant assistant = new Assistant(comboBox1, DbManager.selectCatIncome());
         }
     }
 }
