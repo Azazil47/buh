@@ -59,16 +59,22 @@ namespace Budget
             {
                 if (matches == item)
                 {
-                    //string query = $"INSERT INTO {table} VALUES(\"{matches}\")";
+                    
                     flag = true;
                 }
             }
             return flag;
         }
 
-        public static void addIncome(string category, string name, double sum, DateTime date)
+        public static void addIncome(string table, string category/*, string name, double sum, DateTime date*/)
         {
-            
+            if (!CheckForMatches(category, "category_incoming", "name"))
+            {
+                string query = $"INSERT INTO category_incoming (name) VALUES(\"{category}\")";
+                OleDbCommand command = new OleDbCommand(query, dbConnection);
+
+                command.ExecuteNonQuery();
+            }
         }
     }
 }

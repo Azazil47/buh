@@ -41,7 +41,11 @@ namespace Budget
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(DbManager.CheckForMatches(comboBox1.Text, "category_incoming", "name").ToString());
+           DbManager.addIncome("category_incoming", comboBox1.Text/*, "name", 100.2, dtCalendar.Value*/);
+           
+                
+            
+            //MessageBox.Show(DbManager.CheckForMatches(comboBox1.Text, "category_incoming", "name").ToString());
         }
     }
 }
