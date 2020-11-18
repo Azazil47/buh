@@ -41,7 +41,10 @@ namespace Budget
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-           DbManager.addIncome("category_incoming", comboBox1.Text/*, "name", 100.2, dtCalendar.Value*/);
+            string st = DbManager.getId("category_incoming", comboBox1.Text).ToString();
+
+            MessageBox.Show(st);
+            //DbManager.addIncome("category_incoming", comboBox1.Text/*, "name", 100.2, dtCalendar.Value*/);
            
                 
             

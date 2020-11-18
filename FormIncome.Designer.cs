@@ -67,7 +67,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.99288F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.00712F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel2.Controls.Add(this.lbBalance, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -81,7 +81,7 @@
             // 
             this.lbBalance.AutoSize = true;
             this.lbBalance.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBalance.Location = new System.Drawing.Point(120, 0);
+            this.lbBalance.Location = new System.Drawing.Point(119, 0);
             this.lbBalance.Name = "lbBalance";
             this.lbBalance.Size = new System.Drawing.Size(61, 19);
             this.lbBalance.TabIndex = 0;
@@ -92,7 +92,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.89922F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.10078F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel3.Controls.Add(this.tbSum, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.lbSum, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.lbName, 0, 1);
@@ -120,9 +120,9 @@
             // tbSum
             // 
             this.tbSum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbSum.Location = new System.Drawing.Point(124, 58);
+            this.tbSum.Location = new System.Drawing.Point(123, 58);
             this.tbSum.Name = "tbSum";
-            this.tbSum.Size = new System.Drawing.Size(132, 20);
+            this.tbSum.Size = new System.Drawing.Size(130, 20);
             this.tbSum.TabIndex = 10;
             this.tbSum.Visible = false;
             // 
@@ -133,7 +133,7 @@
             this.lbSum.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSum.Location = new System.Drawing.Point(3, 55);
             this.lbSum.Name = "lbSum";
-            this.lbSum.Size = new System.Drawing.Size(115, 25);
+            this.lbSum.Size = new System.Drawing.Size(114, 25);
             this.lbSum.TabIndex = 7;
             this.lbSum.Text = "Сумма:";
             this.lbSum.Visible = false;
@@ -145,7 +145,7 @@
             this.lbName.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(3, 30);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(115, 25);
+            this.lbName.Size = new System.Drawing.Size(114, 25);
             this.lbName.TabIndex = 3;
             this.lbName.Text = "Комментарий:";
             this.lbName.Visible = false;
@@ -154,9 +154,9 @@
             // 
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 3);
+            this.comboBox1.Location = new System.Drawing.Point(123, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 21);
+            this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
@@ -167,16 +167,16 @@
             this.lbCategory.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCategory.Location = new System.Drawing.Point(3, 0);
             this.lbCategory.Name = "lbCategory";
-            this.lbCategory.Size = new System.Drawing.Size(115, 30);
+            this.lbCategory.Size = new System.Drawing.Size(114, 30);
             this.lbCategory.TabIndex = 1;
             this.lbCategory.Text = "Категория:";
             // 
             // tbName
             // 
             this.tbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbName.Location = new System.Drawing.Point(124, 33);
+            this.tbName.Location = new System.Drawing.Point(123, 33);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(132, 20);
+            this.tbName.Size = new System.Drawing.Size(130, 20);
             this.tbName.TabIndex = 4;
             this.tbName.Visible = false;
             // 
@@ -187,7 +187,7 @@
             this.lbDate.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.Location = new System.Drawing.Point(3, 80);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(115, 37);
+            this.lbDate.Size = new System.Drawing.Size(114, 37);
             this.lbDate.TabIndex = 11;
             this.lbDate.Text = "Дата:";
             this.lbDate.Visible = false;
@@ -195,9 +195,9 @@
             // dtCalendar
             // 
             this.dtCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtCalendar.Location = new System.Drawing.Point(124, 83);
+            this.dtCalendar.Location = new System.Drawing.Point(123, 83);
             this.dtCalendar.Name = "dtCalendar";
-            this.dtCalendar.Size = new System.Drawing.Size(132, 20);
+            this.dtCalendar.Size = new System.Drawing.Size(130, 20);
             this.dtCalendar.TabIndex = 12;
             this.dtCalendar.Visible = false;
             // 
@@ -206,7 +206,7 @@
             this.btAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btAdd.Location = new System.Drawing.Point(3, 120);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(115, 24);
+            this.btAdd.Size = new System.Drawing.Size(114, 24);
             this.btAdd.TabIndex = 13;
             this.btAdd.Text = "Сохранить";
             this.btAdd.UseVisualStyleBackColor = true;
@@ -216,9 +216,9 @@
             // btCancel
             // 
             this.btCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btCancel.Location = new System.Drawing.Point(262, 120);
+            this.btCancel.Location = new System.Drawing.Point(259, 120);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(115, 24);
+            this.btCancel.Size = new System.Drawing.Size(118, 24);
             this.btCancel.TabIndex = 14;
             this.btCancel.Text = "Отмена";
             this.btCancel.UseVisualStyleBackColor = true;

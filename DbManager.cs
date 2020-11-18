@@ -24,7 +24,7 @@ namespace Budget
             {
                 return false;
             }
-        }
+        } // подключение к БД
 
         public static Boolean disconnectDb()
         {
@@ -37,9 +37,9 @@ namespace Budget
             {
                 return false;
             }
-        }
-        
-        public static List<String> selectAllfromTable(string table, string collum)//Получение поле name из таблицы
+        }//Отключение от БД
+
+        public static List<String> selectAllfromTable(string table, string collum)//Получение поле name из таблицы (Имя таблицы, имя столбца)
         {
             List<String> list = new List<string>();
             string query = $"SELECT * FROM {table}";
@@ -47,34 +47,48 @@ namespace Budget
             OleDbDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                list.Add((string) reader[collum]);
+                list.Add((string)reader[collum]);
             }
+            reader.Close();
             return list;
         }
 
-        public static Boolean CheckForMatches(string matches, string table, string collum)
+        public static int getId (string table, string value) //получение id из любой таблицы 
+        {
+            string query = $"SELECT id FROM {table} WHERE name IN('{value}')";
+            OleDbCommand command = new OleDbCommand(query, dbConnection);
+            int id = (Int32)command.ExecuteScalar();
+            return id;
+        }
+
+        public static Boolean CheckForMatches(string table, string collum, string matches)
         {
             Boolean flag = false;
             foreach (var item in selectAllfromTable(table, collum))
             {
                 if (matches == item)
                 {
-                    
                     flag = true;
                 }
             }
             return flag;
         }
 
-        public static void addIncome(string table, string category/*, string name, double sum, DateTime date*/)
+        public static void addIncomeCategory(string table, string category)
         {
             if (!CheckForMatches(category, "category_incoming", "name"))
             {
-                string query = $"INSERT INTO category_incoming (name) VALUES(\"{category}\")";
+                string query = $"INSERT INTO {table} (name) VALUES(\"{category}\")";
                 OleDbCommand command = new OleDbCommand(query, dbConnection);
-
                 command.ExecuteNonQuery();
             }
         }
+
+        public static void addIncome(string table, string category, string name, double sum, DateTime date) //доветси до ума
+        {
+            
+
+        }
     }
 }
+
