@@ -41,9 +41,17 @@ namespace Budget
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            string st = DbManager.getId("category_incoming", comboBox1.Text).ToString();
-
-            MessageBox.Show(st);
+            
+            if (DbManager.getId("category_incoming", comboBox1.Text) != -1)
+            {
+                string st = DbManager.getId("category_incoming", comboBox1.Text).ToString();
+                MessageBox.Show(st);
+            }
+            else
+            {
+                MessageBox.Show("Такой записи нет в БД");
+            }
+            
             //DbManager.addIncome("category_incoming", comboBox1.Text/*, "name", 100.2, dtCalendar.Value*/);
            
                 

@@ -53,12 +53,19 @@ namespace Budget
             return list;
         }
 
-        public static int getId (string table, string value) //получение id из любой таблицы 
+        public static int getId (string table, string value) //получение id из любой таблицы передается (таблица, значение поля) 
         {
             string query = $"SELECT id FROM {table} WHERE name IN('{value}')";
             OleDbCommand command = new OleDbCommand(query, dbConnection);
-            int id = (Int32)command.ExecuteScalar();
-            return id;
+            try
+            {
+                int id = (int)command.ExecuteScalar();
+                return id;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
         }
 
         public static Boolean CheckForMatches(string table, string collum, string matches)
