@@ -57,14 +57,18 @@ namespace Budget
         {
             string query = $"SELECT id FROM {table} WHERE name IN('{value}')";
             OleDbCommand command = new OleDbCommand(query, dbConnection);
-            try
+            object id = -1;
+            id = command.ExecuteScalar();
+            if (id != null) //Получение id имеющейся записи
             {
-                int id = (int)command.ExecuteScalar();
-                return id;
+                return (int) id;
             }
-            catch (Exception)
+            else //Добавление новой записи если такой нет и получение ее id
             {
-                return -1;
+                string queryadd = $"INSERT INTO {table} (name) VALUES(\"{value}\")";
+                OleDbCommand commandadd = new OleDbCommand(queryadd, dbConnection);
+                commandadd.ExecuteNonQuery();
+                return (int)command.ExecuteScalar();
             }
         }
 
