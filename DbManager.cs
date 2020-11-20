@@ -98,7 +98,7 @@ namespace Budget
         public static void addIncome(string table, string category, int sum/*, double sum, DateTime date*/) //доветси до ума
         {
             int id = getId("category_incoming", category);
-            string queryadd = "INSERT INTO incoming (id_category, date) VALUES (2, 'sd')";
+            string queryadd = "INSERT INTO incoming (id_category, sum) VALUES (2, 500)";
             
             OleDbCommand commandadd = new OleDbCommand(queryadd, dbConnection);
             commandadd.ExecuteNonQuery();
