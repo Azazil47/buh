@@ -72,33 +72,36 @@ namespace Budget
             }
         }
 
-        public static Boolean CheckForMatches(string table, string collum, string matches)
-        {
-            Boolean flag = false;
-            foreach (var item in selectAllfromTable(table, collum))
-            {
-                if (matches == item)
-                {
-                    flag = true;
-                }
-            }
-            return flag;
-        }
+        //public static Boolean CheckForMatches(string table, string collum, string matches)
+        //{
+        //    Boolean flag = false;
+        //    foreach (var item in selectAllfromTable(table, collum))
+        //    {
+        //        if (matches == item)
+        //        {
+        //            flag = true;
+        //        }
+        //    }
+        //    return flag;
+        //}
 
-        public static void addIncomeCategory(string table, string category)
-        {
-            if (!CheckForMatches(category, "category_incoming", "name"))
-            {
-                string query = $"INSERT INTO {table} (name) VALUES(\"{category}\")";
-                OleDbCommand command = new OleDbCommand(query, dbConnection);
-                command.ExecuteNonQuery();
-            }
-        }
+        //public static void addIncomeCategory(string table, string category)
+        //{
+        //    if (!CheckForMatches(category, "category_incoming", "name"))
+        //    {
+        //        string query = $"INSERT INTO {table} (name) VALUES(\"{category}\")";
+        //        OleDbCommand command = new OleDbCommand(query, dbConnection);
+        //        command.ExecuteNonQuery();
+        //    }
+        //}
 
-        public static void addIncome(string table, string category, string name, double sum, DateTime date) //доветси до ума
+        public static void addIncome(string table, string category, int sum/*, double sum, DateTime date*/) //доветси до ума
         {
+            int id = getId("category_incoming", category);
+            string queryadd = "INSERT INTO incoming (id_category, date) VALUES (2, 'sd')";
             
-
+            OleDbCommand commandadd = new OleDbCommand(queryadd, dbConnection);
+            commandadd.ExecuteNonQuery();
         }
     }
 }

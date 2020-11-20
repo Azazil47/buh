@@ -25,7 +25,7 @@ namespace Budget
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             lbName.Visible = true;
-            tbName.Visible = true;
+            tbNote.Visible = true;
             lbSum.Visible = true;
             tbSum.Visible = true;
             lbDate.Visible = true;
@@ -42,17 +42,17 @@ namespace Budget
         private void btAdd_Click(object sender, EventArgs e)
         {
             
-            if (DbManager.getId("category_incoming", comboBox1.Text) != -1)
-            {
-                string st = DbManager.getId("category_incoming", comboBox1.Text).ToString();
-                MessageBox.Show(st);
-            }
-            else
-            {
-                MessageBox.Show("Такой записи нет в БД");
-            }
+            //if (DbManager.getId("category_incoming", comboBox1.Text) != -1)
+            //{
+            //    string st = DbManager.getId("category_incoming", comboBox1.Text).ToString();
+            //    MessageBox.Show(st);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Такой записи нет в БД");
+            //}
             
-            //DbManager.addIncome("category_incoming", comboBox1.Text/*, "name", 100.2, dtCalendar.Value*/);
+            DbManager.addIncome("incoming", comboBox1.Text, 222/*, 100.2, dtCalendar.Value*/);
            
                 
             

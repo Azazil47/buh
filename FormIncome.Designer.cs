@@ -37,7 +37,7 @@
             this.lbName = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lbCategory = new System.Windows.Forms.Label();
-            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbNote = new System.Windows.Forms.TextBox();
             this.lbDate = new System.Windows.Forms.Label();
             this.dtCalendar = new System.Windows.Forms.DateTimePicker();
             this.btAdd = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.99288F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.00712F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel2.Controls.Add(this.lbBalance, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -92,13 +92,13 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.89922F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.10078F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel3.Controls.Add(this.tbSum, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.lbSum, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.lbName, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbCategory, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tbName, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tbNote, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.lbDate, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.dtCalendar, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.btAdd, 0, 4);
@@ -122,7 +122,7 @@
             this.tbSum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbSum.Location = new System.Drawing.Point(123, 58);
             this.tbSum.Name = "tbSum";
-            this.tbSum.Size = new System.Drawing.Size(130, 20);
+            this.tbSum.Size = new System.Drawing.Size(129, 20);
             this.tbSum.TabIndex = 10;
             this.tbSum.Visible = false;
             // 
@@ -156,7 +156,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(123, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 21);
+            this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
@@ -171,14 +171,14 @@
             this.lbCategory.TabIndex = 1;
             this.lbCategory.Text = "Категория:";
             // 
-            // tbName
+            // tbNote
             // 
-            this.tbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbName.Location = new System.Drawing.Point(123, 33);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(130, 20);
-            this.tbName.TabIndex = 4;
-            this.tbName.Visible = false;
+            this.tbNote.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbNote.Location = new System.Drawing.Point(123, 33);
+            this.tbNote.Name = "tbNote";
+            this.tbNote.Size = new System.Drawing.Size(129, 20);
+            this.tbNote.TabIndex = 4;
+            this.tbNote.Visible = false;
             // 
             // lbDate
             // 
@@ -197,7 +197,7 @@
             this.dtCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtCalendar.Location = new System.Drawing.Point(123, 83);
             this.dtCalendar.Name = "dtCalendar";
-            this.dtCalendar.Size = new System.Drawing.Size(130, 20);
+            this.dtCalendar.Size = new System.Drawing.Size(129, 20);
             this.dtCalendar.TabIndex = 12;
             this.dtCalendar.Visible = false;
             // 
@@ -216,9 +216,9 @@
             // btCancel
             // 
             this.btCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btCancel.Location = new System.Drawing.Point(259, 120);
+            this.btCancel.Location = new System.Drawing.Point(258, 120);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(118, 24);
+            this.btCancel.Size = new System.Drawing.Size(119, 24);
             this.btCancel.TabIndex = 14;
             this.btCancel.Text = "Отмена";
             this.btCancel.UseVisualStyleBackColor = true;
@@ -254,7 +254,7 @@
         private System.Windows.Forms.Label lbCategory;
         private System.Windows.Forms.TextBox tbSum;
         private System.Windows.Forms.Label lbSum;
-        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbNote;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.DateTimePicker dtCalendar;
         private System.Windows.Forms.Button btAdd;
